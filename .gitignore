@@ -26,3 +26,12 @@ go.work.sum
 
 # Build files
 build/
+
+# webmgr frontend build output
+cmd/webmgr/dist/*
+!cmd/webmgr/dist/.gitkeep
+cmd/webmgr/frontend/node_modules/
+cmd/webmgr/webmgr
+cmd/webmgr/webmgr.exe
+# webmgr runtime data
+cmd/webmgr/data/

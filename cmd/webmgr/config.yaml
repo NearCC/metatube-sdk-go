@@ -1,0 +1,28 @@
+app:
+  host: "0.0.0.0"
+  port: 8081
+  data_dir: "./data"
+
+metatube:
+  mode: "embedded"
+  token: ""
+  movie_provider: "JavBus"
+  api_host: "0.0.0.0"
+  api_port: 8080
+
+log:
+  filename: "webmgr.log"
+  max_size_mb: 16
+  max_files: 5
+
+# 影片检索系（前端下拉框选项）。省略则使用内置默认（AV/FC2/FANZA/Madou/ThePornDB）。
+# 提供商列表可自定义；当前端传入 system=<ID> 时，webmgr 会并发查该系下所有 provider 并合并去重。
+# 取消注释可启用 MadouQu（需要额外设置 MT_MOVIE_PROVIDER_MADOUQU__PRIORITY=1000）或 ThePornDB（需要 access token）：
+#multiplexer:
+#  movie_systems:
+#    - id: "Madou"
+#      name: "Madou"
+#      providers: ["MadouQu"]
+#    - id: "ThePornDB"
+#      name: "ThePornDB"
+#      providers: ["ThePornDB Movie", "ThePornDB Scene"]
